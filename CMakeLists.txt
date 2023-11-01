@@ -137,7 +137,6 @@ include_directories(
 
 add_executable(odom_node src/odom_node.cpp)
 add_executable(reset_odom_client src/reset_odom_client.cpp)
-add_executable(reset_odom_server src/reset_odom.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -153,15 +152,11 @@ add_executable(reset_odom_server src/reset_odom.cpp)
 target_link_libraries(odom_node
   ${catkin_LIBRARIES}
 )
-target_link_libraries(reset_odom_server
-  ${catkin_LIBRARIES}
-)
 target_link_libraries(reset_odom_client
   ${catkin_LIBRARIES}
 )
 
 add_dependencies(odom_node ${catkin_EXPORTED_TARGETS})
-add_dependencies(reset_odom_server ${catkin_EXPORTED_TARGETS})
 add_dependencies(reset_odom_client ${catkin_EXPORTED_TARGETS})
 
 #############

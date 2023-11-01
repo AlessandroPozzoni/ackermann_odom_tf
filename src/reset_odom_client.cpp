@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 
     if (client.call(srv))
     {
-        ROS_INFO("Resetted: ", srv.response.resetted);
+        ROS_INFO("Resetted: [%d]", srv.response.resetted);
     }
     else
     {
