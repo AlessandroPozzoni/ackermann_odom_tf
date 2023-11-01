@@ -1,0 +1,12 @@
+<launch>
+    <param name="/use_sim_time" value="true"/>
+    <rosparam file="$(find project1_22)/config/parameters.yaml" command="load"/>
+
+    <node pkg="project1_22" type="odom_node" name="odom_node" output="screen"/>
+
+    <node pkg="tf" type="static_transform_publisher" name="front_left" args=    "1.85 0.93 0.0 0.9191021, 0.3940186, 0.0003138, 0.0007319 base_link sick_front_left 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="front_right" args=   "1.85  -0.93 0.0 0.9286643, -0.3709204, -0.0002954, 0.0007395 base_link sick_front_right 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="rear_left" args=     "-1.85 0.93 0.0 0.3716598, 0.9283687, 0.0007393, 0.000296 base_link sick_rear_left 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="rear_right" args=    "-1.75 -0.8 0.0 0.4084873, -0.9127637, -0.0007269, 0.0003253 base_link sick_rear_right 100"/>
+
+</launch>
