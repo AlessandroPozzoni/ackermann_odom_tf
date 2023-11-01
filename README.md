@@ -1,7 +1,7 @@
 # Ackermann Steering Odometry on EasyMile EZ10
 
 ## Task
-Set up and configure a node to provide the odometry of an autonomous vehicle modeled with Ackermann Steering.
+Set up and configure ROS package to provide the odometry of an autonomous vehicle modeled with Ackermann Steering, publishing a custom message, an odometry, tfs and using a service to reset the odometry.
 
 ![LasersScan](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/images/lasers_scan.png)
 
