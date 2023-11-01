@@ -110,3 +110,8 @@ __Settings__:
 * Press Add > By display type > TF > Ok
 * Press Add > By topic and select one LaserScan for each of the topic ```sick_front_left``` ... > Ok
   * If the LaserScan is not visible, increase the size by expanding the LaserScan submenus.
+
+### Reset the odometry
+```bash
+rosrun project1_22 reset_odom_client
+```
