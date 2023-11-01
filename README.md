@@ -1,4 +1,4 @@
-# ackermann-odom-tf
+# Ackermann Steering Odometry on EasyMile EZ10
 
 ## Task
 Set up and configure a node to provide the odometry of an autonomous vehicle modeled with Ackermann Steering.
