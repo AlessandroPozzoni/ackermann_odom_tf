@@ -8,6 +8,8 @@ Set up and configure a node to provide the odometry of an autonomous vehicle mod
 ## Vehicle
 Experimental autonomous shuttle EasyMile EZ10.
 
+![EasyMile EZ10](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/images/EZMile.png)
+
 ### Available data:
 * Wheelbase: 2.80m
 * Displacement of the lasers from the center of the vehicle (converted in quaternion in [parameters.yaml](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/launcher.launch))
