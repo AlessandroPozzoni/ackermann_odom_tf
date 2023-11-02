@@ -3,16 +3,16 @@
 ## Task
 Set up and configure ROS package to provide the odometry of an autonomous vehicle modeled with Ackermann Steering, publishing a custom message, an odometry, tfs and using a service to reset the odometry.
 
-![LasersScan](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/images/lasers_scan.png)
+![LasersScan](https://github.com/AlessandroPozzoni/ackermann_odom_tf/blob/main/images/lasers_scan.png)
 
 ## Vehicle
 Experimental autonomous shuttle EasyMile EZ10.
 
-![EasyMile EZ10](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/images/EZMile.png)
+![EasyMile EZ10](https://github.com/AlessandroPozzoni/ackermann_odom_tf/blob/main/images/EZMile.png)
 
 ### Available data:
 * Wheelbase: 2.80m
-* Displacement of the lasers from the center of the vehicle (converted in quaternion in [parameters.yaml](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/launcher.launch))
+* Displacement of the lasers from the center of the vehicle (converted in quaternion in [parameters.yaml](https://github.com/AlessandroPozzoni/ackermann_odom_tf/blob/main/launcher.launch))
   Sensor | x | y | z | yaw | pitch | roll
   -------|---|---|---|-----|-------|----- 
   sick_front_left | 1.85 | 0.93 | 0.0 | 0.81 | 0.0 | 3.14
@@ -32,7 +32,7 @@ Experimental autonomous shuttle EasyMile EZ10.
 ## Layout:
 ### ROS package: project1_22
 * ### Nodes:
-  * [odom_node](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/src/odom_node.cpp):
+  * [odom_node](https://github.com/AlessandroPozzoni/ackermann_odom_tf/blob/main/src/odom_node.cpp):
     
     * Publications:
       * /custom_odometry&emsp;  &emsp; [project1_22/Odom]
@@ -45,13 +45,13 @@ Experimental autonomous shuttle EasyMile EZ10.
     * Services: 
       * /reset_odom
      
-  * [reset_odom_client](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/src/reset_odom_client.cpp)
+  * [reset_odom_client](https://github.com/AlessandroPozzoni/ackermann_odom_tf/blob/main/src/reset_odom_client.cpp)
  
 * ### Custom messages:
-  * [Odom](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/msg/Odom.msg)
+  * [Odom](https://github.com/AlessandroPozzoni/ackermann_odom_tf/blob/main/msg/Odom.msg)
  
 * ### Services:
-  * [ResetOdom](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/srv/ResetOdom.srv)
+  * [ResetOdom](https://github.com/AlessandroPozzoni/ackermann_odom_tf/blob/main/srv/ResetOdom.srv)
     
    
 ### ROS package: tf
@@ -68,11 +68,11 @@ Experimental autonomous shuttle EasyMile EZ10.
 
 ## tf tree 
 
-![TFTree](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/images/tf_tree.png)
+![TFTree](https://github.com/AlessandroPozzoni/ackermann_odom_tf/blob/main/images/tf_tree.png)
 
 ## Published TF + static transformations
 
-![StaticTF](https://github.com/AlessandroPozzoni/ackermann-odom-tf/blob/main/images/static_tf.png)
+![StaticTF](https://github.com/AlessandroPozzoni/ackermann_odom_tf/blob/main/images/static_tf.png)
 
 ## Build and run
 ### Build the packages
