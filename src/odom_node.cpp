@@ -1,11 +1,10 @@
 #include <ros/ros.h>
-#include "project1_22/odom_node.h"
 #include <nav_msgs/Odometry.h>
 #include <tf/transform_broadcaster.h>
 #include <string>
 #include <sstream>
-#include <project1_22/Odom.h>
-#include "project1_22/ResetOdom.h"
+#include <ackermann_odom_tf/Odom.h>
+#include "ackermann_odom_tf/ResetOdom.h"
 
 #define L 2.8
 
@@ -29,7 +28,7 @@ class OdomNode {
 
         OdomNode() {
             pub_odom = n.advertise<nav_msgs::Odometry>("odometry", 10);
-            pub_custom = n.advertise<project1_22::Odom>("custom_odometry", 10);
+            pub_custom = n.advertise<ackermann_odom_tf::Odom>("custom_odometry", 10);
             sub = n.subscribe("/speed_steer", 1,  &OdomNode::callback, this);
 
             // Retrieve parameters for x, y, z
@@ -57,7 +56,7 @@ class OdomNode {
 
         void publishOdom() {
             nav_msgs::Odometry odom;
-            project1_22::Odom custom_odom;
+            ackermann_odom_tf::Odom custom_odom;
             custom_odom.x = x;
             custom_odom.y = y;
             custom_odom.th = th;
@@ -118,7 +117,7 @@ class OdomNode {
             computeOdom();
         }
 
-        bool reset(project1_22::ResetOdom::Request &req, project1_22::ResetOdom::Response &res) {
+        bool reset(ackermann_odom_tf::ResetOdom::Request &req, ackermann_odom_tf::ResetOdom::Response &res) {
             x = 0;
             y = 0;
             th = 0;

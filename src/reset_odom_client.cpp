@@ -1,13 +1,13 @@
 #include <ros/ros.h>
-#include "project1_22/ResetOdom.h"
+#include "ackermann_odom_tf/ResetOdom.h"
 
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "reset_odom_client");
 
     ros::NodeHandle n;
-    ros::ServiceClient client = n.serviceClient<project1_22::ResetOdom>("reset_odom");
-    project1_22::ResetOdom srv;
+    ros::ServiceClient client = n.serviceClient<ackermann_odom_tf::ResetOdom>("reset_odom");
+    ackermann_odom_tf::ResetOdom srv;
 
     if (client.call(srv))
     {
